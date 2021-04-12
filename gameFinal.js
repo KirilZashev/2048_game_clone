@@ -7,11 +7,11 @@ if (localStorage.getItem('currentRecord')) {
 } else {
     localStorage.setItem('currentRecord', JSON.stringify(currentRecord))
 }
-CURRENT_RECORD_ELEMENT.innerHTML = `Current record: ${currentRecord}`
+
 let gameIsOn = false;
 function GAME() {
     gameIsOn = true;
-
+    CURRENT_RECORD_ELEMENT.innerHTML = `Current record: ${currentRecord}`
     let score = document.getElementById("result");
     score.innerHTML = 0 + "pts"
     const ROW_LENGTH = 4;
